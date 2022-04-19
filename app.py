@@ -10,8 +10,7 @@ def home():
 @app.route('/about')
 def about():
     return render_template('about.html', pageTitle="About")
-
-@app.route('/estimate', methods=['GET', 'POST'])
+@app.route('/estimates', methods=['GET', 'POST'])
 def estimate():
     if request.method == 'POST':
         form = request.form
@@ -30,7 +29,7 @@ def estimate():
         total_cost_estimate = totalMatCost + total_labor_cost
         total_cost_estimate = str(total_cost_estimate)
         return(total_cost_estimate)
-    return(render_template('estimate.html', pageTitle="Estimate")) 
+    return(render_template('estimates.html', pageTitle="Estimate")) 
 
 if __name__ == '__main__':
     app.run(debug=True)
