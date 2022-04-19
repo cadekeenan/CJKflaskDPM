@@ -2,7 +2,7 @@ import pytest
 from app import app as CJKFlask
 
 @pytest.fixture()
-def app()
+def app():
     yield CJKFlask
 
 @pytest.fixture
